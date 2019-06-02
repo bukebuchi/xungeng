@@ -12,7 +12,7 @@ return array (
       'amap' => '高德地图',
       'tencent' => '腾讯地图',
     ),
-    'value' => 'amap',
+    'value' => 'baidu',
     'rule' => 'required',
     'msg' => '',
     'tip' => '',

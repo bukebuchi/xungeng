@@ -62,53 +62,53 @@ define(['jquery', 'bootstrap', 'backend', 'table', 'form'], function ($, undefin
                 //map.enableInertialDragging();   //开启惯性拖拽
                 map.enableScrollWheelZoom(true); //是否允许缩放
                 //map.centerAndZoom("上海",15); //根据城市名设定地图中心点
-                var mapObj = new AMap.Map('allmap');
-                //加载定位插件
-                mapObj.plugin('AMap.Geolocation', function () {
-                geolocation = new AMap.Geolocation({
-                enableHighAccuracy: true,//是否使用高精度定位，默认:true
-                timeout: 10000,          //超过10秒后停止定位，默认：无穷大
-                maximumAge: 0,           //定位结果缓存0毫秒，默认：0
-                convert: true,           //自动偏移坐标，偏移后的坐标为高德坐标，默认：true
-                });
-                mapObj.addControl(geolocation);
-                geolocation.getCurrentPosition();
-                AMap.event.addListener(geolocation, 'complete', onComplete);//返回定位信息
+                // var mapObj = new AMap.Map('allmap');
+                // //加载定位插件
+                // mapObj.plugin('AMap.Geolocation', function () {
+                // geolocation = new AMap.Geolocation({
+                // enableHighAccuracy: true,//是否使用高精度定位，默认:true
+                // timeout: 10000,          //超过10秒后停止定位，默认：无穷大
+                // maximumAge: 0,           //定位结果缓存0毫秒，默认：0
+                // convert: true,           //自动偏移坐标，偏移后的坐标为高德坐标，默认：true
+                // });
+                // mapObj.addControl(geolocation);
+                // geolocation.getCurrentPosition();
+                // AMap.event.addListener(geolocation, 'complete', onComplete);//返回定位信息
                 //AMap.event.addListener(geolocation, 'error', onError);      //返回定位出错信息
                 var geolocation = new BMap.Geolocation();
-                // geolocation.getCurrentPosition(function (r) {
-                //     if (this.getStatus() == BMAP_STATUS_SUCCESS) {
-                //         var mk = new BMap.Marker(r.point);
-                //         map.addOverlay(mk);
-                //         map.panTo(r.point);
-                //         Layer.alert('您的位置：' + r.point.lng + ',' + r.point.lat);
-                //     } else {
-                //         Layer.alert('failed' + this.getStatus());
-                //     }
+                geolocation.getCurrentPosition(function (r) {
+                    if (this.getStatus() == BMAP_STATUS_SUCCESS) {
+                        var mk = new BMap.Marker(r.point);
+                        map.addOverlay(mk);
+                        map.panTo(r.point);
+                        Layer.alert('您的位置：' + r.point.lng + ',' + r.point.lat);
+                    } else {
+                        Layer.alert('failed' + this.getStatus());
+                    }
 
     }
 
-    function onComplete(data) {
-        if ("SUCCESS" == data.info) {
-            //高德地图转百度地图坐标
-            //因为系统中使用的均是百度的坐标,此处需要将高德坐标转换成百度坐标
-            var ggPoint = new BMap.Point(data.position.lng, data.position.lat);
-            var convertor = new BMap.Convertor();
-            var pointArr = [];
-            pointArr.push(ggPoint);
-            //坐标转换方法的意义可以查询 http://lbsyun.baidu.com/index.php?title=webapi/guide/changeposition
-            convertor.translate(pointArr, 3, 5, function (data) {
-                if (data.status === 0) {
-                    $scope.gisLoc = data.points[0].lng + "," + data.points[0].lat;
-                }
-            })
-            fulladdress = data.formattedAddress;
-            $scope.gis = fulladdress;
-            $scope.gisInfo = "";
-        } else {
-            $scope.gisInfo = "地址解析失败";
-        }
-    }
+    // function onComplete(data) {
+    //     if ("SUCCESS" == data.info) {
+    //         //高德地图转百度地图坐标
+    //         //因为系统中使用的均是百度的坐标,此处需要将高德坐标转换成百度坐标
+    //         var ggPoint = new BMap.Point(data.position.lng, data.position.lat);
+    //         var convertor = new BMap.Convertor();
+    //         var pointArr = [];
+    //         pointArr.push(ggPoint);
+    //         //坐标转换方法的意义可以查询 http://lbsyun.baidu.com/index.php?title=webapi/guide/changeposition
+    //         convertor.translate(pointArr, 3, 5, function (data) {
+    //             if (data.status === 0) {
+    //                 $scope.gisLoc = data.points[0].lng + "," + data.points[0].lat;
+    //             }
+    //         })
+    //         fulladdress = data.formattedAddress;
+    //         $scope.gis = fulladdress;
+    //         $scope.gisInfo = "";
+    //     } else {
+    //         $scope.gisInfo = "地址解析失败";
+    //     }
+    // }
 
 
 
