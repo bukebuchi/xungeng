@@ -1,0 +1,23 @@
+[ 2019-06-15T00:26:55+08:00 ][ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000161s ]
+[ info ] [ LOG ] INIT File
+[ 2019-06-15T00:26:55+08:00 ][ info ] [ CACHE ] INIT File
+[ 2019-06-15T00:26:55+08:00 ][ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.004526s ]
+[ 2019-06-15T00:26:56+08:00 ][ info ] [ DB ] INIT mysql
+[ 2019-06-15T00:26:56+08:00 ][ sql ] [ DB ] CONNECT:[ UseTime:0.003184s ] mysql:host=127.0.0.1;port=3308;dbname=fastadmin;charset=utf8
+[ 2019-06-15T00:26:56+08:00 ][ sql ] [ SQL ] SHOW COLUMNS FROM `fa_auth_rule` [ RunTime:0.058734s ]
+[ 2019-06-15T00:26:56+08:00 ][ sql ] [ SQL ] SELECT * FROM `fa_auth_rule` WHERE  (  `name` LIKE 'test\\_copy%' ) [ RunTime:0.007569s ]
+[ 2019-06-15T00:26:58+08:00 ][ sql ] [ SQL ] SELECT * FROM `fa_auth_rule` WHERE  `id` IN (225,227,229,228,226,230) [ RunTime:0.001076s ]
+[ 2019-06-15T00:26:58+08:00 ][ sql ] [ SQL ] DELETE FROM `fa_auth_rule`    WHERE  `id` = 225 [ RunTime:0.084137s ]
+[ 2019-06-15T00:26:58+08:00 ][ sql ] [ SQL ] DELETE FROM `fa_auth_rule`    WHERE  `id` = 226 [ RunTime:0.101071s ]
+[ 2019-06-15T00:26:58+08:00 ][ sql ] [ SQL ] DELETE FROM `fa_auth_rule`    WHERE  `id` = 227 [ RunTime:0.115439s ]
+[ 2019-06-15T00:26:58+08:00 ][ sql ] [ SQL ] DELETE FROM `fa_auth_rule`    WHERE  `id` = 228 [ RunTime:0.117706s ]
+[ 2019-06-15T00:26:58+08:00 ][ sql ] [ SQL ] DELETE FROM `fa_auth_rule`    WHERE  `id` = 229 [ RunTime:0.049950s ]
+[ 2019-06-15T00:26:58+08:00 ][ sql ] [ SQL ] DELETE FROM `fa_auth_rule`    WHERE  `id` = 230 [ RunTime:0.133382s ]
+[ 2019-06-15T00:27:10+08:00 ][ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000153s ]
+[ info ] [ LOG ] INIT File
+[ 2019-06-15T00:27:10+08:00 ][ info ] [ CACHE ] INIT File
+[ 2019-06-15T00:27:10+08:00 ][ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.009049s ]
+[ 2019-06-15T00:27:10+08:00 ][ info ] [ DB ] INIT mysql
+[ 2019-06-15T00:27:10+08:00 ][ sql ] [ DB ] CONNECT:[ UseTime:0.003826s ] mysql:host=127.0.0.1;port=3308;dbname=fastadmin;charset=utf8
+[ 2019-06-15T00:27:10+08:00 ][ sql ] [ SQL ] SHOW TABLE STATUS LIKE 'test_copy' [ RunTime:0.001391s ]
+[ 2019-06-15T00:27:11+08:00 ][ sql ] [ SQL ] SHOW TABLE STATUS LIKE 'fa_test_copy' [ RunTime:0.067133s ]

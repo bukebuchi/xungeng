@@ -14,3 +14,18 @@
 [ 2019-06-14T16:36:00+08:00 ][ sql ] [ DB ] CONNECT:[ UseTime:0.152276s ] mysql:host=127.0.0.1;port=3308;dbname=fastadmin;charset=utf8
 [ 2019-06-14T16:36:00+08:00 ][ sql ] [ SQL ] SHOW COLUMNS FROM `fa_auth_rule` [ RunTime:0.005123s ]
 [ 2019-06-14T16:36:00+08:00 ][ sql ] [ SQL ] SELECT * FROM `fa_auth_rule` WHERE  (  `name` LIKE 'arrest1%' ) [ RunTime:0.002210s ]
+[ 2019-06-14T18:41:26+08:00 ][ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000171s ]
+[ info ] [ LOG ] INIT File
+[ 2019-06-14T18:41:26+08:00 ][ info ] [ CACHE ] INIT File
+[ 2019-06-14T18:41:26+08:00 ][ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.006708s ]
+[ 2019-06-14T18:41:26+08:00 ][ info ] [ DB ] INIT mysql
+[ 2019-06-14T18:41:26+08:00 ][ sql ] [ DB ] CONNECT:[ UseTime:0.042553s ] mysql:host=127.0.0.1;port=3308;dbname=fastadmin;charset=utf8
+[ 2019-06-14T18:41:26+08:00 ][ sql ] [ SQL ] SHOW COLUMNS FROM `fa_auth_rule` [ RunTime:0.004593s ]
+[ 2019-06-14T18:41:26+08:00 ][ sql ] [ SQL ] SELECT * FROM `fa_auth_rule` WHERE  (  `name` LIKE 'duty%' ) [ RunTime:0.001473s ]
+[ 2019-06-14T18:41:28+08:00 ][ sql ] [ SQL ] SELECT * FROM `fa_auth_rule` WHERE  `id` IN (239,241,243,242,240,244) [ RunTime:0.001066s ]
+[ 2019-06-14T18:41:28+08:00 ][ sql ] [ SQL ] DELETE FROM `fa_auth_rule`    WHERE  `id` = 239 [ RunTime:0.089588s ]
+[ 2019-06-14T18:41:28+08:00 ][ sql ] [ SQL ] DELETE FROM `fa_auth_rule`    WHERE  `id` = 240 [ RunTime:0.074000s ]
+[ 2019-06-14T18:41:28+08:00 ][ sql ] [ SQL ] DELETE FROM `fa_auth_rule`    WHERE  `id` = 241 [ RunTime:0.091960s ]
+[ 2019-06-14T18:41:28+08:00 ][ sql ] [ SQL ] DELETE FROM `fa_auth_rule`    WHERE  `id` = 242 [ RunTime:0.067789s ]
+[ 2019-06-14T18:41:29+08:00 ][ sql ] [ SQL ] DELETE FROM `fa_auth_rule`    WHERE  `id` = 243 [ RunTime:0.099428s ]
+[ 2019-06-14T18:41:29+08:00 ][ sql ] [ SQL ] DELETE FROM `fa_auth_rule`    WHERE  `id` = 244 [ RunTime:0.121548s ]
