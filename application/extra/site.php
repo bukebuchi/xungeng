@@ -1,7 +1,7 @@
 <?php
 
 return array (
-  'name' => 'FastAdmin',
+  'name' => '巡更系统',
   'beian' => '',
   'cdnurl' => '',
   'version' => '1.0.1',
@@ -20,8 +20,7 @@ return array (
     'article' => 'Article',
     'test' => 'Test',
     'username' => 'username',
-    'arrest1' => 'arrest1',
-    'tiandong' => 'tiandong',
+    'test_copy' => 'test_copy',
   ),
   'configgroup' => 
   array (

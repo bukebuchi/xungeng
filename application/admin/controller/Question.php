@@ -7,22 +7,21 @@ use app\common\controller\Backend;
 /**
  * 测试管理
  *
- * @icon fa fa-circle-o
+ * @icon fa fa-question
  */
-class Arrest1 extends Backend
+class Question extends Backend
 {
     
     /**
-     * Arrest1模型对象
-     * @var \app\admin\model\Arrest1
+     * Question模型对象
+     * @var \app\admin\model\Question
      */
     protected $model = null;
 
     public function _initialize()
     {
         parent::_initialize();
-        $this->model = new \app\admin\model\Arrest1;
-        $this->view->assign("hobbydataList", $this->model->getHobbydataList());
+        $this->model = new \app\admin\model\Question;
         $this->view->assign("genderdataList", $this->model->getGenderdataList());
     }
     

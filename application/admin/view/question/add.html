@@ -3,25 +3,7 @@
     <div class="form-group">
         <label class="control-label col-xs-12 col-sm-2">{:__('Category_ids')}:</label>
         <div class="col-xs-12 col-sm-8">
-            <input id="c-category_ids" data-rule="required" data-source="category/selectpage" data-params='{"custom[type]":"arrest1"}' data-multiple="true" class="form-control selectpage" name="row[category_ids]" type="text" value="">
-        </div>
-    </div>
-    <div class="form-group">
-        <label class="control-label col-xs-12 col-sm-2">{:__('Hobbydata')}:</label>
-        <div class="col-xs-12 col-sm-8">
-            
-            <div class="checkbox">
-            {foreach name="hobbydataList" item="vo"}
-            <label for="row[hobbydata][]-{$key}"><input id="row[hobbydata][]-{$key}" name="row[hobbydata][]" type="checkbox" value="{$key}" {in name="key" value=""}checked{/in} /> {$vo}</label> 
-            {/foreach}
-            </div>
-
-        </div>
-    </div>
-    <div class="form-group">
-        <label class="control-label col-xs-12 col-sm-2">{:__('City')}:</label>
-        <div class="col-xs-12 col-sm-8">
-            <div class='control-relative'><input id="c-city" data-rule="required" class="form-control" data-toggle="city-picker" name="row[city]" type="text" value=""></div>
+            <input id="c-category_ids" data-rule="required" data-source="auth/admin/selectpage" data-field="nickname" data-multiple="true" class="form-control selectpage" name="row[category_ids]" type="text" value="">
         </div>
     </div>
     <div class="form-group">
@@ -39,21 +21,52 @@
         </div>
     </div>
     <div class="form-group">
-        <label class="control-label col-xs-12 col-sm-2">{:__('Keywords')}:</label>
+        <label class="control-label col-xs-12 col-sm-2">{:__('Carid')}:</label>
         <div class="col-xs-12 col-sm-8">
-            <input id="c-keywords" data-rule="required" class="form-control" name="row[keywords]" type="text" value="">
+            <input id="c-carid" data-rule="required" class="form-control" name="row[carid]" type="text">
         </div>
     </div>
     <div class="form-group">
-        <label class="control-label col-xs-12 col-sm-2">{:__('Identity')}:</label>
+        <label class="control-label col-xs-12 col-sm-2">{:__('Cartype')}:</label>
         <div class="col-xs-12 col-sm-8">
-            <input id="c-identity" data-rule="required" class="form-control" name="row[identity]" type="text" value="">
+            <input id="c-cartype" data-rule="required" class="form-control" name="row[cartype]" type="text">
         </div>
     </div>
     <div class="form-group">
-        <label class="control-label col-xs-12 col-sm-2">{:__('Addcontent')}:</label>
+        <label class="control-label col-xs-12 col-sm-2">{:__('Carcolor')}:</label>
         <div class="col-xs-12 col-sm-8">
-            <input id="c-addcontent" data-rule="required" class="form-control" name="row[addcontent]" type="text">
+            <input id="c-carcolor" data-rule="required" class="form-control" name="row[carcolor]" type="text">
+        </div>
+    </div>
+    
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Carowname')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-carowname" data-rule="required" class="form-control" name="row[carowname]" type="text">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Carownidentity')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-carownidentity" data-rule="required" class="form-control" name="row[carownidentity]" type="text" value="">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Carownertel')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-carownertel" data-rule="required" class="form-control" name="row[carownertel]" type="text">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Carownercity')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <div class='control-relative'><input id="c-carownercity" data-rule="required" class="form-control" data-toggle="city-picker" name="row[carownercity]" type="text" value=""></div>
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Questionname')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-questionname" data-rule="required" class="form-control" name="row[questionname]" type="text" value="">
         </div>
     </div>
     <div class="form-group">
@@ -69,17 +82,30 @@
         </div>
     </div>
     <div class="form-group">
-        <label class="control-label col-xs-12 col-sm-2">{:__('Views')}:</label>
+        <label class="control-label col-xs-12 col-sm-2">{:__('Identity')}:</label>
         <div class="col-xs-12 col-sm-8">
-            <input id="c-views" data-rule="required" class="form-control" name="row[views]" type="number" value="0">
+            <input id="c-identity" data-rule="required" class="form-control" name="row[identity]" type="text" value="">
         </div>
     </div>
     <div class="form-group">
-        <label class="control-label col-xs-12 col-sm-2">{:__('Title')}:</label>
+        <label class="control-label col-xs-12 col-sm-2">{:__('City')}:</label>
         <div class="col-xs-12 col-sm-8">
-            <input id="c-title" data-rule="required" class="form-control" name="row[title]" type="text" value="">
+            <div class='control-relative'><input id="c-city" data-rule="required" class="form-control" data-toggle="city-picker" name="row[city]" type="text" value=""></div>
         </div>
     </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Telphone')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-telphone" data-rule="required" class="form-control" name="row[telphone]" type="text">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Addressname')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-addressname" data-rule="required" class="form-control" name="row[addressname]" type="text">
+        </div>
+    </div>
+    
     <div class="form-group">
         <label class="control-label col-xs-12 col-sm-2">{:__('Activitytime')}:</label>
         <div class="col-xs-12 col-sm-8">

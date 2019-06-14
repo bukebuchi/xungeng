@@ -25,43 +25,39 @@ class Dispute extends Model
 
     // 追加属性
     protected $append = [
-        'hobbydata_text',
-        'genderdata_text'
+        'genderdataA_text',
+        'genderdataB_text'
     ];
     
 
     
-    public function getHobbydataList()
+    public function getGenderdataaList()
     {
-        return ['music' => __('Hobbydata music'), 'reading' => __('Hobbydata reading'), 'swimming' => __('Hobbydata swimming')];
+        return ['male' => __('Genderdataa male'), 'female' => __('Genderdataa female')];
     }
 
-    public function getGenderdataList()
+    public function getGenderdatabList()
     {
-        return ['male' => __('Genderdata male'), 'female' => __('Genderdata female')];
-    }
-
-
-    public function getHobbydataTextAttr($value, $data)
-    {
-        $value = $value ? $value : (isset($data['hobbydata']) ? $data['hobbydata'] : '');
-        $valueArr = explode(',', $value);
-        $list = $this->getHobbydataList();
-        return implode(',', array_intersect_key($list, array_flip($valueArr)));
+        return ['male' => __('Genderdatab male'), 'female' => __('Genderdatab female')];
     }
 
 
-    public function getGenderdataTextAttr($value, $data)
+    public function getGenderdataaTextAttr($value, $data)
     {
-        $value = $value ? $value : (isset($data['genderdata']) ? $data['genderdata'] : '');
-        $list = $this->getGenderdataList();
+        $value = $value ? $value : (isset($data['genderdataA']) ? $data['genderdataA'] : '');
+        $list = $this->getGenderdataaList();
         return isset($list[$value]) ? $list[$value] : '';
     }
 
-    protected function setHobbydataAttr($value)
+
+    public function getGenderdatabTextAttr($value, $data)
     {
-        return is_array($value) ? implode(',', $value) : $value;
+        $value = $value ? $value : (isset($data['genderdataB']) ? $data['genderdataB'] : '');
+        $list = $this->getGenderdatabList();
+        return isset($list[$value]) ? $list[$value] : '';
     }
+
+
 
 
 }

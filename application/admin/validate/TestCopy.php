@@ -4,7 +4,7 @@ namespace app\admin\validate;
 
 use think\Validate;
 
-class Arrest1 extends Validate
+class TestCopy extends Validate
 {
     /**
      * 验证规则

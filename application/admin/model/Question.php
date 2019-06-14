@@ -5,7 +5,7 @@ namespace app\admin\model;
 use think\Model;
 
 
-class Arrest1 extends Model
+class Question extends Model
 {
 
     
@@ -13,7 +13,7 @@ class Arrest1 extends Model
     //数据库
     protected $connection = 'database';
     // 表名
-    protected $name = 'arrest1';
+    protected $name = 'question';
     
     // 自动写入时间戳字段
     protected $autoWriteTimestamp = false;
@@ -25,29 +25,14 @@ class Arrest1 extends Model
 
     // 追加属性
     protected $append = [
-        'hobbydata_text',
         'genderdata_text'
     ];
     
 
     
-    public function getHobbydataList()
-    {
-        return ['music' => __('Hobbydata music'), 'reading' => __('Hobbydata reading'), 'swimming' => __('Hobbydata swimming')];
-    }
-
     public function getGenderdataList()
     {
         return ['male' => __('Genderdata male'), 'female' => __('Genderdata female')];
-    }
-
-
-    public function getHobbydataTextAttr($value, $data)
-    {
-        $value = $value ? $value : (isset($data['hobbydata']) ? $data['hobbydata'] : '');
-        $valueArr = explode(',', $value);
-        $list = $this->getHobbydataList();
-        return implode(',', array_intersect_key($list, array_flip($valueArr)));
     }
 
 
@@ -58,10 +43,7 @@ class Arrest1 extends Model
         return isset($list[$value]) ? $list[$value] : '';
     }
 
-    protected function setHobbydataAttr($value)
-    {
-        return is_array($value) ? implode(',', $value) : $value;
-    }
+
 
 
 }

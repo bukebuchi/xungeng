@@ -1,0 +1,200 @@
+[ 2019-06-13T10:43:35+08:00 ][ sql ] [ DB ] CONNECT:[ UseTime:0.004572s ] mysql:host=127.0.0.1;port=3308;dbname=fastadmin;charset=utf8
+[ 2019-06-13T10:43:35+08:00 ][ sql ] [ SQL ] SHOW TABLE STATUS LIKE 'question' [ RunTime:0.001493s ]
+[ 2019-06-13T10:43:35+08:00 ][ sql ] [ SQL ] SHOW TABLE STATUS LIKE 'fa_question' [ RunTime:0.002633s ]
+[ 2019-06-13T10:43:35+08:00 ][ sql ] [ SQL ] SELECT * FROM `information_schema`.`columns` WHERE TABLE_SCHEMA = 'fastadmin' AND table_name = 'fa_question' ORDER BY ORDINAL_POSITION [ RunTime:0.002713s ]
+[ 2019-06-13T10:43:35+08:00 ][ sql ] [ DB ] CONNECT:[ UseTime:0.008053s ] mysql:host=127.0.0.1;port=3308;dbname=fastadmin;charset=utf8
+[ 2019-06-13T10:43:36+08:00 ][ sql ] [ SQL ] SHOW COLUMNS FROM `fa_auth_rule` [ RunTime:0.028819s ]
+[ 2019-06-13T10:43:36+08:00 ][ sql ] [ SQL ] SELECT * FROM `fa_auth_rule` WHERE  `name` = 'question' LIMIT 1 [ RunTime:0.027704s ]
+[ 2019-06-13T10:43:36+08:00 ][ sql ] [ SQL ] INSERT INTO `fa_auth_rule` (`pid` , `name` , `title` , `icon` , `remark` , `ismenu` , `status` , `createtime` , `updatetime`) VALUES (0 , 'question' , '测试管理' , 'fa fa-question' , '' , 1 , 'normal' , 1560393816 , 1560393816) [ RunTime:0.093439s ]
+[ 2019-06-13T10:43:36+08:00 ][ sql ] [ SQL ] SELECT `id` FROM `fa_auth_rule` WHERE  `name` = 'question/index' LIMIT 1 [ RunTime:0.000823s ]
+[ 2019-06-13T10:43:36+08:00 ][ sql ] [ SQL ] SELECT `id` FROM `fa_auth_rule` WHERE  `name` = 'question/add' LIMIT 1 [ RunTime:0.000674s ]
+[ 2019-06-13T10:43:36+08:00 ][ sql ] [ SQL ] SELECT `id` FROM `fa_auth_rule` WHERE  `name` = 'question/edit' LIMIT 1 [ RunTime:0.000662s ]
+[ 2019-06-13T10:43:36+08:00 ][ sql ] [ SQL ] SELECT `id` FROM `fa_auth_rule` WHERE  `name` = 'question/del' LIMIT 1 [ RunTime:0.000660s ]
+[ 2019-06-13T10:43:36+08:00 ][ sql ] [ SQL ] SELECT `id` FROM `fa_auth_rule` WHERE  `name` = 'question/multi' LIMIT 1 [ RunTime:0.000664s ]
+[ 2019-06-13T10:43:36+08:00 ][ sql ] [ SQL ] INSERT INTO `fa_auth_rule` (`id` , `pid` , `name` , `icon` , `title` , `ismenu` , `status` , `createtime` , `updatetime`) VALUES (NULL , 201 , 'question/index' , 'fa fa-circle-o' , '查看' , 0 , 'normal' , 1560393816 , 1560393816) [ RunTime:0.001704s ]
+[ 2019-06-13T10:43:36+08:00 ][ sql ] [ SQL ] INSERT INTO `fa_auth_rule` (`id` , `pid` , `name` , `icon` , `title` , `ismenu` , `status` , `createtime` , `updatetime`) VALUES (NULL , 201 , 'question/add' , 'fa fa-circle-o' , '添加' , 0 , 'normal' , 1560393816 , 1560393816) [ RunTime:0.000701s ]
+[ 2019-06-13T10:43:36+08:00 ][ sql ] [ SQL ] INSERT INTO `fa_auth_rule` (`id` , `pid` , `name` , `icon` , `title` , `ismenu` , `status` , `createtime` , `updatetime`) VALUES (NULL , 201 , 'question/edit' , 'fa fa-circle-o' , '编辑' , 0 , 'normal' , 1560393816 , 1560393816) [ RunTime:0.000680s ]
+[ 2019-06-13T10:43:36+08:00 ][ sql ] [ SQL ] INSERT INTO `fa_auth_rule` (`id` , `pid` , `name` , `icon` , `title` , `ismenu` , `status` , `createtime` , `updatetime`) VALUES (NULL , 201 , 'question/del' , 'fa fa-circle-o' , '删除' , 0 , 'normal' , 1560393816 , 1560393816) [ RunTime:0.000675s ]
+[ 2019-06-13T10:43:36+08:00 ][ sql ] [ SQL ] INSERT INTO `fa_auth_rule` (`id` , `pid` , `name` , `icon` , `title` , `ismenu` , `status` , `createtime` , `updatetime`) VALUES (NULL , 201 , 'question/multi' , 'fa fa-circle-o' , '批量更新' , 0 , 'normal' , 1560393816 , 1560393816) [ RunTime:0.000669s ]
+[ 2019-06-13T17:14:34+08:00 ][ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000153s ]
+[ info ] [ LOG ] INIT File
+[ 2019-06-13T17:14:34+08:00 ][ info ] [ CACHE ] INIT File
+[ 2019-06-13T17:14:34+08:00 ][ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.005996s ]
+[ 2019-06-13T17:14:34+08:00 ][ info ] [ DB ] INIT mysql
+[ 2019-06-13T17:14:34+08:00 ][ sql ] [ DB ] CONNECT:[ UseTime:0.002517s ] mysql:host=127.0.0.1;port=3308;dbname=fastadmin;charset=utf8
+[ 2019-06-13T17:14:34+08:00 ][ sql ] [ SQL ] SHOW TABLE STATUS LIKE 'question1' [ RunTime:0.002216s ]
+[ 2019-06-13T17:14:34+08:00 ][ sql ] [ SQL ] SHOW TABLE STATUS LIKE 'fa_question1' [ RunTime:0.002727s ]
+[ 2019-06-13T17:14:34+08:00 ][ sql ] [ SQL ] SELECT * FROM `information_schema`.`columns` WHERE TABLE_SCHEMA = 'fastadmin' AND table_name = 'fa_question1' ORDER BY ORDINAL_POSITION [ RunTime:0.002156s ]
+[ 2019-06-13T17:14:34+08:00 ][ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000744s ]
+[ info ] [ LOG ] INIT File
+[ 2019-06-13T17:14:34+08:00 ][ info ] [ CACHE ] INIT File
+[ 2019-06-13T17:14:34+08:00 ][ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.004593s ]
+[ 2019-06-13T17:14:34+08:00 ][ info ] [ DB ] INIT mysql
+[ 2019-06-13T17:14:35+08:00 ][ info ] [ LANG ] D:\wamp64\xungeng\application\admin\lang/zh-cn.php
+[ 2019-06-13T17:14:35+08:00 ][ sql ] [ DB ] CONNECT:[ UseTime:0.003173s ] mysql:host=127.0.0.1;port=3308;dbname=fastadmin;charset=utf8
+[ 2019-06-13T17:14:35+08:00 ][ sql ] [ SQL ] SHOW COLUMNS FROM `fa_auth_rule` [ RunTime:0.001621s ]
+[ 2019-06-13T17:14:35+08:00 ][ sql ] [ SQL ] SELECT * FROM `fa_auth_rule` WHERE  `name` = 'question1' LIMIT 1 [ RunTime:0.000951s ]
+[ 2019-06-13T17:14:35+08:00 ][ sql ] [ SQL ] INSERT INTO `fa_auth_rule` (`pid` , `name` , `title` , `icon` , `remark` , `ismenu` , `status` , `createtime` , `updatetime`) VALUES (0 , 'question1' , '测试管理' , 'fa fa-circle-o' , '' , 1 , 'normal' , 1560417275 , 1560417275) [ RunTime:0.139788s ]
+[ 2019-06-13T17:14:35+08:00 ][ sql ] [ SQL ] SELECT `id` FROM `fa_auth_rule` WHERE  `name` = 'question1/index' LIMIT 1 [ RunTime:0.001215s ]
+[ 2019-06-13T17:14:35+08:00 ][ sql ] [ SQL ] SELECT `id` FROM `fa_auth_rule` WHERE  `name` = 'question1/add' LIMIT 1 [ RunTime:0.000806s ]
+[ 2019-06-13T17:14:35+08:00 ][ sql ] [ SQL ] SELECT `id` FROM `fa_auth_rule` WHERE  `name` = 'question1/edit' LIMIT 1 [ RunTime:0.000811s ]
+[ 2019-06-13T17:14:35+08:00 ][ sql ] [ SQL ] SELECT `id` FROM `fa_auth_rule` WHERE  `name` = 'question1/del' LIMIT 1 [ RunTime:0.000741s ]
+[ 2019-06-13T17:14:35+08:00 ][ sql ] [ SQL ] SELECT `id` FROM `fa_auth_rule` WHERE  `name` = 'question1/multi' LIMIT 1 [ RunTime:0.000781s ]
+[ 2019-06-13T17:14:35+08:00 ][ sql ] [ SQL ] INSERT INTO `fa_auth_rule` (`id` , `pid` , `name` , `icon` , `title` , `ismenu` , `status` , `createtime` , `updatetime`) VALUES (NULL , 207 , 'question1/index' , 'fa fa-circle-o' , '查看' , 0 , 'normal' , 1560417275 , 1560417275) [ RunTime:0.000874s ]
+[ 2019-06-13T17:14:35+08:00 ][ sql ] [ SQL ] INSERT INTO `fa_auth_rule` (`id` , `pid` , `name` , `icon` , `title` , `ismenu` , `status` , `createtime` , `updatetime`) VALUES (NULL , 207 , 'question1/add' , 'fa fa-circle-o' , '添加' , 0 , 'normal' , 1560417275 , 1560417275) [ RunTime:0.001957s ]
+[ 2019-06-13T17:14:35+08:00 ][ sql ] [ SQL ] INSERT INTO `fa_auth_rule` (`id` , `pid` , `name` , `icon` , `title` , `ismenu` , `status` , `createtime` , `updatetime`) VALUES (NULL , 207 , 'question1/edit' , 'fa fa-circle-o' , '编辑' , 0 , 'normal' , 1560417275 , 1560417275) [ RunTime:0.000834s ]
+[ 2019-06-13T17:14:35+08:00 ][ sql ] [ SQL ] INSERT INTO `fa_auth_rule` (`id` , `pid` , `name` , `icon` , `title` , `ismenu` , `status` , `createtime` , `updatetime`) VALUES (NULL , 207 , 'question1/del' , 'fa fa-circle-o' , '删除' , 0 , 'normal' , 1560417275 , 1560417275) [ RunTime:0.000817s ]
+[ 2019-06-13T17:14:35+08:00 ][ sql ] [ SQL ] INSERT INTO `fa_auth_rule` (`id` , `pid` , `name` , `icon` , `title` , `ismenu` , `status` , `createtime` , `updatetime`) VALUES (NULL , 207 , 'question1/multi' , 'fa fa-circle-o' , '批量更新' , 0 , 'normal' , 1560417275 , 1560417275) [ RunTime:0.019157s ]
+[ 2019-06-13T17:23:01+08:00 ][ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000154s ]
+[ info ] [ LOG ] INIT File
+[ 2019-06-13T17:23:01+08:00 ][ info ] [ CACHE ] INIT File
+[ 2019-06-13T17:23:01+08:00 ][ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.009324s ]
+[ 2019-06-13T17:23:01+08:00 ][ info ] [ DB ] INIT mysql
+[ 2019-06-13T17:23:01+08:00 ][ sql ] [ DB ] CONNECT:[ UseTime:0.002572s ] mysql:host=127.0.0.1;port=3308;dbname=fastadmin;charset=utf8
+[ 2019-06-13T17:23:01+08:00 ][ sql ] [ SQL ] SHOW TABLE STATUS LIKE 'qustion1' [ RunTime:0.001387s ]
+[ 2019-06-13T17:23:01+08:00 ][ sql ] [ SQL ] SHOW TABLE STATUS LIKE 'fa_qustion1' [ RunTime:0.001206s ]
+[ 2019-06-13T17:23:10+08:00 ][ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000159s ]
+[ info ] [ LOG ] INIT File
+[ 2019-06-13T17:23:10+08:00 ][ info ] [ CACHE ] INIT File
+[ 2019-06-13T17:23:10+08:00 ][ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.004464s ]
+[ 2019-06-13T17:23:10+08:00 ][ info ] [ DB ] INIT mysql
+[ 2019-06-13T17:23:10+08:00 ][ sql ] [ DB ] CONNECT:[ UseTime:0.002370s ] mysql:host=127.0.0.1;port=3308;dbname=fastadmin;charset=utf8
+[ 2019-06-13T17:23:10+08:00 ][ sql ] [ SQL ] SHOW TABLE STATUS LIKE 'question1' [ RunTime:0.001154s ]
+[ 2019-06-13T17:23:10+08:00 ][ sql ] [ SQL ] SHOW TABLE STATUS LIKE 'fa_question1' [ RunTime:0.002819s ]
+[ 2019-06-13T17:24:08+08:00 ][ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000186s ]
+[ info ] [ LOG ] INIT File
+[ 2019-06-13T17:24:08+08:00 ][ info ] [ CACHE ] INIT File
+[ 2019-06-13T17:24:08+08:00 ][ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.016852s ]
+[ 2019-06-13T17:24:08+08:00 ][ info ] [ DB ] INIT mysql
+[ 2019-06-13T17:24:08+08:00 ][ sql ] [ DB ] CONNECT:[ UseTime:0.004404s ] mysql:host=127.0.0.1;port=3308;dbname=fastadmin;charset=utf8
+[ 2019-06-13T17:24:08+08:00 ][ sql ] [ SQL ] SHOW COLUMNS FROM `fa_auth_rule` [ RunTime:0.067972s ]
+[ 2019-06-13T17:24:09+08:00 ][ sql ] [ SQL ] SELECT * FROM `fa_auth_rule` WHERE  (  `name` LIKE 'question1%' ) [ RunTime:0.082211s ]
+[ 2019-06-13T17:24:11+08:00 ][ sql ] [ SQL ] SELECT * FROM `fa_auth_rule` WHERE  `id` IN (207,209,211,210,208,212) [ RunTime:0.001823s ]
+[ 2019-06-13T17:24:11+08:00 ][ sql ] [ SQL ] DELETE FROM `fa_auth_rule`    WHERE  `id` = 207 [ RunTime:0.261913s ]
+[ 2019-06-13T17:24:11+08:00 ][ sql ] [ SQL ] DELETE FROM `fa_auth_rule`    WHERE  `id` = 208 [ RunTime:0.175548s ]
+[ 2019-06-13T17:24:11+08:00 ][ sql ] [ SQL ] DELETE FROM `fa_auth_rule`    WHERE  `id` = 209 [ RunTime:0.088748s ]
+[ 2019-06-13T17:24:11+08:00 ][ sql ] [ SQL ] DELETE FROM `fa_auth_rule`    WHERE  `id` = 210 [ RunTime:0.087172s ]
+[ 2019-06-13T17:24:11+08:00 ][ sql ] [ SQL ] DELETE FROM `fa_auth_rule`    WHERE  `id` = 211 [ RunTime:0.111408s ]
+[ 2019-06-13T17:24:11+08:00 ][ sql ] [ SQL ] DELETE FROM `fa_auth_rule`    WHERE  `id` = 212 [ RunTime:0.070513s ]
+[ 2019-06-13T17:33:47+08:00 ][ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000206s ]
+[ info ] [ LOG ] INIT File
+[ 2019-06-13T17:33:47+08:00 ][ info ] [ CACHE ] INIT File
+[ 2019-06-13T17:33:47+08:00 ][ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.009249s ]
+[ 2019-06-13T17:33:47+08:00 ][ info ] [ DB ] INIT mysql
+[ 2019-06-13T17:33:47+08:00 ][ sql ] [ DB ] CONNECT:[ UseTime:0.086388s ] mysql:host=127.0.0.1;port=3308;dbname=fastadmin;charset=utf8
+[ 2019-06-13T17:33:47+08:00 ][ sql ] [ SQL ] SHOW COLUMNS FROM `fa_auth_rule` [ RunTime:0.002250s ]
+[ 2019-06-13T17:33:47+08:00 ][ sql ] [ SQL ] SELECT * FROM `fa_auth_rule` WHERE  (  `name` LIKE 'question1%' ) [ RunTime:0.001274s ]
+[ 2019-06-13T17:33:53+08:00 ][ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000158s ]
+[ info ] [ LOG ] INIT File
+[ 2019-06-13T17:33:53+08:00 ][ info ] [ CACHE ] INIT File
+[ 2019-06-13T17:33:53+08:00 ][ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.004068s ]
+[ 2019-06-13T17:33:53+08:00 ][ info ] [ DB ] INIT mysql
+[ 2019-06-13T17:33:53+08:00 ][ sql ] [ DB ] CONNECT:[ UseTime:0.003352s ] mysql:host=127.0.0.1;port=3308;dbname=fastadmin;charset=utf8
+[ 2019-06-13T17:33:53+08:00 ][ sql ] [ SQL ] SHOW TABLE STATUS LIKE 'question1' [ RunTime:0.001242s ]
+[ 2019-06-13T17:33:53+08:00 ][ sql ] [ SQL ] SHOW TABLE STATUS LIKE 'fa_question1' [ RunTime:0.001207s ]
+[ 2019-06-13T18:21:56+08:00 ][ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000153s ]
+[ info ] [ LOG ] INIT File
+[ 2019-06-13T18:21:56+08:00 ][ info ] [ CACHE ] INIT File
+[ 2019-06-13T18:21:56+08:00 ][ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.004744s ]
+[ 2019-06-13T18:21:56+08:00 ][ info ] [ DB ] INIT mysql
+[ 2019-06-13T18:21:56+08:00 ][ sql ] [ DB ] CONNECT:[ UseTime:0.002515s ] mysql:host=127.0.0.1;port=3308;dbname=fastadmin;charset=utf8
+[ 2019-06-13T18:21:56+08:00 ][ sql ] [ SQL ] SHOW TABLE STATUS LIKE 'dispute' [ RunTime:0.001206s ]
+[ 2019-06-13T18:21:56+08:00 ][ sql ] [ SQL ] SHOW TABLE STATUS LIKE 'fa_dispute' [ RunTime:0.001116s ]
+[ 2019-06-13T18:22:12+08:00 ][ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000156s ]
+[ info ] [ LOG ] INIT File
+[ 2019-06-13T18:22:12+08:00 ][ info ] [ CACHE ] INIT File
+[ 2019-06-13T18:22:12+08:00 ][ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.004534s ]
+[ 2019-06-13T18:22:12+08:00 ][ info ] [ DB ] INIT mysql
+[ 2019-06-13T18:22:12+08:00 ][ sql ] [ DB ] CONNECT:[ UseTime:0.002412s ] mysql:host=127.0.0.1;port=3308;dbname=fastadmin;charset=utf8
+[ 2019-06-13T18:22:12+08:00 ][ sql ] [ SQL ] SHOW COLUMNS FROM `fa_auth_rule` [ RunTime:0.001602s ]
+[ 2019-06-13T18:22:12+08:00 ][ sql ] [ SQL ] SELECT * FROM `fa_auth_rule` WHERE  (  `name` LIKE 'dispute%' ) [ RunTime:0.001087s ]
+[ 2019-06-13T18:22:14+08:00 ][ sql ] [ SQL ] SELECT * FROM `fa_auth_rule` WHERE  `id` IN (165,167,169,168,166,170) [ RunTime:0.000902s ]
+[ 2019-06-13T18:22:14+08:00 ][ sql ] [ SQL ] DELETE FROM `fa_auth_rule`    WHERE  `id` = 165 [ RunTime:0.075248s ]
+[ 2019-06-13T18:22:14+08:00 ][ sql ] [ SQL ] DELETE FROM `fa_auth_rule`    WHERE  `id` = 166 [ RunTime:0.065993s ]
+[ 2019-06-13T18:22:14+08:00 ][ sql ] [ SQL ] DELETE FROM `fa_auth_rule`    WHERE  `id` = 167 [ RunTime:0.087409s ]
+[ 2019-06-13T18:22:14+08:00 ][ sql ] [ SQL ] DELETE FROM `fa_auth_rule`    WHERE  `id` = 168 [ RunTime:0.067065s ]
+[ 2019-06-13T18:22:14+08:00 ][ sql ] [ SQL ] DELETE FROM `fa_auth_rule`    WHERE  `id` = 169 [ RunTime:0.142614s ]
+[ 2019-06-13T18:22:15+08:00 ][ sql ] [ SQL ] DELETE FROM `fa_auth_rule`    WHERE  `id` = 170 [ RunTime:0.252682s ]
+[ 2019-06-13T18:44:24+08:00 ][ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000156s ]
+[ info ] [ LOG ] INIT File
+[ 2019-06-13T18:44:24+08:00 ][ info ] [ CACHE ] INIT File
+[ 2019-06-13T18:44:24+08:00 ][ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.005157s ]
+[ 2019-06-13T18:44:25+08:00 ][ info ] [ DB ] INIT mysql
+[ 2019-06-13T18:44:25+08:00 ][ sql ] [ DB ] CONNECT:[ UseTime:0.004561s ] mysql:host=127.0.0.1;port=3308;dbname=fastadmin;charset=utf8
+[ 2019-06-13T18:44:25+08:00 ][ sql ] [ SQL ] SHOW TABLE STATUS LIKE 'dispute' [ RunTime:0.001454s ]
+[ 2019-06-13T18:44:25+08:00 ][ sql ] [ SQL ] SHOW TABLE STATUS LIKE 'fa_dispute' [ RunTime:0.002653s ]
+[ 2019-06-13T18:44:25+08:00 ][ sql ] [ SQL ] SELECT * FROM `information_schema`.`columns` WHERE TABLE_SCHEMA = 'fastadmin' AND table_name = 'fa_dispute' ORDER BY ORDINAL_POSITION [ RunTime:0.001980s ]
+[ 2019-06-13T18:44:25+08:00 ][ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000159s ]
+[ info ] [ LOG ] INIT File
+[ 2019-06-13T18:44:25+08:00 ][ info ] [ CACHE ] INIT File
+[ 2019-06-13T18:44:25+08:00 ][ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.004534s ]
+[ 2019-06-13T18:44:25+08:00 ][ info ] [ DB ] INIT mysql
+[ 2019-06-13T18:44:25+08:00 ][ info ] [ DB ] INIT mysql
+[ 2019-06-13T18:44:25+08:00 ][ info ] [ LANG ] D:\wamp64\xungeng\application\admin\lang/zh-cn.php
+[ 2019-06-13T18:44:25+08:00 ][ sql ] [ DB ] CONNECT:[ UseTime:0.002538s ] mysql:host=127.0.0.1;port=3308;dbname=fastadmin;charset=utf8
+[ 2019-06-13T18:44:25+08:00 ][ sql ] [ SQL ] SHOW COLUMNS FROM `fa_auth_rule` [ RunTime:0.001832s ]
+[ 2019-06-13T18:44:25+08:00 ][ sql ] [ SQL ] SELECT * FROM `fa_auth_rule` WHERE  `name` = 'dispute' LIMIT 1 [ RunTime:0.077794s ]
+[ 2019-06-13T18:44:25+08:00 ][ sql ] [ SQL ] INSERT INTO `fa_auth_rule` (`pid` , `name` , `title` , `icon` , `remark` , `ismenu` , `status` , `createtime` , `updatetime`) VALUES (0 , 'dispute' , '测试管理' , 'fa fa-circle-o' , '' , 1 , 'normal' , 1560422665 , 1560422665) [ RunTime:0.157127s ]
+[ 2019-06-13T18:44:25+08:00 ][ sql ] [ SQL ] SELECT `id` FROM `fa_auth_rule` WHERE  `name` = 'dispute/index' LIMIT 1 [ RunTime:0.001615s ]
+[ 2019-06-13T18:44:25+08:00 ][ sql ] [ SQL ] SELECT `id` FROM `fa_auth_rule` WHERE  `name` = 'dispute/add' LIMIT 1 [ RunTime:0.027289s ]
+[ 2019-06-13T18:44:25+08:00 ][ sql ] [ SQL ] SELECT `id` FROM `fa_auth_rule` WHERE  `name` = 'dispute/edit' LIMIT 1 [ RunTime:0.000769s ]
+[ 2019-06-13T18:44:25+08:00 ][ sql ] [ SQL ] SELECT `id` FROM `fa_auth_rule` WHERE  `name` = 'dispute/del' LIMIT 1 [ RunTime:0.000744s ]
+[ 2019-06-13T18:44:25+08:00 ][ sql ] [ SQL ] SELECT `id` FROM `fa_auth_rule` WHERE  `name` = 'dispute/multi' LIMIT 1 [ RunTime:0.000742s ]
+[ 2019-06-13T18:44:25+08:00 ][ sql ] [ SQL ] INSERT INTO `fa_auth_rule` (`id` , `pid` , `name` , `icon` , `title` , `ismenu` , `status` , `createtime` , `updatetime`) VALUES (NULL , 213 , 'dispute/index' , 'fa fa-circle-o' , '查看' , 0 , 'normal' , 1560422665 , 1560422665) [ RunTime:0.000823s ]
+[ 2019-06-13T18:44:25+08:00 ][ sql ] [ SQL ] INSERT INTO `fa_auth_rule` (`id` , `pid` , `name` , `icon` , `title` , `ismenu` , `status` , `createtime` , `updatetime`) VALUES (NULL , 213 , 'dispute/add' , 'fa fa-circle-o' , '添加' , 0 , 'normal' , 1560422665 , 1560422665) [ RunTime:0.000784s ]
+[ 2019-06-13T18:44:25+08:00 ][ sql ] [ SQL ] INSERT INTO `fa_auth_rule` (`id` , `pid` , `name` , `icon` , `title` , `ismenu` , `status` , `createtime` , `updatetime`) VALUES (NULL , 213 , 'dispute/edit' , 'fa fa-circle-o' , '编辑' , 0 , 'normal' , 1560422665 , 1560422665) [ RunTime:0.001754s ]
+[ 2019-06-13T18:44:25+08:00 ][ sql ] [ SQL ] INSERT INTO `fa_auth_rule` (`id` , `pid` , `name` , `icon` , `title` , `ismenu` , `status` , `createtime` , `updatetime`) VALUES (NULL , 213 , 'dispute/del' , 'fa fa-circle-o' , '删除' , 0 , 'normal' , 1560422665 , 1560422665) [ RunTime:0.000739s ]
+[ 2019-06-13T18:44:25+08:00 ][ sql ] [ SQL ] INSERT INTO `fa_auth_rule` (`id` , `pid` , `name` , `icon` , `title` , `ismenu` , `status` , `createtime` , `updatetime`) VALUES (NULL , 213 , 'dispute/multi' , 'fa fa-circle-o' , '批量更新' , 0 , 'normal' , 1560422665 , 1560422665) [ RunTime:0.000815s ]
+[ 2019-06-13T18:56:27+08:00 ][ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000208s ]
+[ info ] [ LOG ] INIT File
+[ 2019-06-13T18:56:27+08:00 ][ info ] [ CACHE ] INIT File
+[ 2019-06-13T18:56:27+08:00 ][ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.004106s ]
+[ 2019-06-13T18:56:27+08:00 ][ info ] [ DB ] INIT mysql
+[ 2019-06-13T18:56:28+08:00 ][ sql ] [ DB ] CONNECT:[ UseTime:0.535005s ] mysql:host=127.0.0.1;port=3308;dbname=fastadmin;charset=utf8
+[ 2019-06-13T18:56:28+08:00 ][ sql ] [ SQL ] SHOW TABLE STATUS LIKE 'dispute' [ RunTime:0.002534s ]
+[ 2019-06-13T18:56:28+08:00 ][ sql ] [ SQL ] SHOW TABLE STATUS LIKE 'fa_dispute' [ RunTime:0.325760s ]
+[ 2019-06-13T18:57:03+08:00 ][ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000157s ]
+[ info ] [ LOG ] INIT File
+[ 2019-06-13T18:57:03+08:00 ][ info ] [ CACHE ] INIT File
+[ 2019-06-13T18:57:03+08:00 ][ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.004036s ]
+[ 2019-06-13T18:57:03+08:00 ][ info ] [ DB ] INIT mysql
+[ 2019-06-13T18:57:03+08:00 ][ sql ] [ DB ] CONNECT:[ UseTime:0.002845s ] mysql:host=127.0.0.1;port=3308;dbname=fastadmin;charset=utf8
+[ 2019-06-13T18:57:03+08:00 ][ sql ] [ SQL ] SHOW COLUMNS FROM `fa_auth_rule` [ RunTime:0.030980s ]
+[ 2019-06-13T18:57:03+08:00 ][ sql ] [ SQL ] SELECT * FROM `fa_auth_rule` WHERE  (  `name` LIKE 'dispute%' ) [ RunTime:0.001556s ]
+[ 2019-06-13T18:57:04+08:00 ][ sql ] [ SQL ] SELECT * FROM `fa_auth_rule` WHERE  `id` IN (213,215,217,216,214,218) [ RunTime:0.001040s ]
+[ 2019-06-13T18:57:04+08:00 ][ sql ] [ SQL ] DELETE FROM `fa_auth_rule`    WHERE  `id` = 213 [ RunTime:0.098759s ]
+[ 2019-06-13T18:57:04+08:00 ][ sql ] [ SQL ] DELETE FROM `fa_auth_rule`    WHERE  `id` = 214 [ RunTime:0.192369s ]
+[ 2019-06-13T18:57:04+08:00 ][ sql ] [ SQL ] DELETE FROM `fa_auth_rule`    WHERE  `id` = 215 [ RunTime:0.057186s ]
+[ 2019-06-13T18:57:05+08:00 ][ sql ] [ SQL ] DELETE FROM `fa_auth_rule`    WHERE  `id` = 216 [ RunTime:0.158637s ]
+[ 2019-06-13T18:57:05+08:00 ][ sql ] [ SQL ] DELETE FROM `fa_auth_rule`    WHERE  `id` = 217 [ RunTime:0.093004s ]
+[ 2019-06-13T18:57:05+08:00 ][ sql ] [ SQL ] DELETE FROM `fa_auth_rule`    WHERE  `id` = 218 [ RunTime:0.131931s ]
+[ 2019-06-13T18:58:13+08:00 ][ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000148s ]
+[ info ] [ LOG ] INIT File
+[ 2019-06-13T18:58:13+08:00 ][ info ] [ CACHE ] INIT File
+[ 2019-06-13T18:58:13+08:00 ][ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.004057s ]
+[ 2019-06-13T18:58:13+08:00 ][ info ] [ DB ] INIT mysql
+[ 2019-06-13T18:58:13+08:00 ][ sql ] [ DB ] CONNECT:[ UseTime:0.003305s ] mysql:host=127.0.0.1;port=3308;dbname=fastadmin;charset=utf8
+[ 2019-06-13T18:58:13+08:00 ][ sql ] [ SQL ] SHOW TABLE STATUS LIKE 'dispute' [ RunTime:0.001336s ]
+[ 2019-06-13T18:58:13+08:00 ][ sql ] [ SQL ] SHOW TABLE STATUS LIKE 'fa_dispute' [ RunTime:0.002627s ]
+[ 2019-06-13T18:58:13+08:00 ][ sql ] [ SQL ] SELECT * FROM `information_schema`.`columns` WHERE TABLE_SCHEMA = 'fastadmin' AND table_name = 'fa_dispute' ORDER BY ORDINAL_POSITION [ RunTime:0.001944s ]
+[ 2019-06-13T18:58:14+08:00 ][ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000156s ]
+[ info ] [ LOG ] INIT File
+[ 2019-06-13T18:58:14+08:00 ][ info ] [ CACHE ] INIT File
+[ 2019-06-13T18:58:14+08:00 ][ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.004084s ]
+[ 2019-06-13T18:58:14+08:00 ][ info ] [ DB ] INIT mysql
+[ 2019-06-13T18:58:14+08:00 ][ info ] [ DB ] INIT mysql
+[ 2019-06-13T18:58:14+08:00 ][ info ] [ LANG ] D:\wamp64\xungeng\application\admin\lang/zh-cn.php
+[ 2019-06-13T18:58:14+08:00 ][ sql ] [ DB ] CONNECT:[ UseTime:0.003223s ] mysql:host=127.0.0.1;port=3308;dbname=fastadmin;charset=utf8
+[ 2019-06-13T18:58:14+08:00 ][ sql ] [ SQL ] SHOW COLUMNS FROM `fa_auth_rule` [ RunTime:0.001632s ]
+[ 2019-06-13T18:58:14+08:00 ][ sql ] [ SQL ] SELECT * FROM `fa_auth_rule` WHERE  `name` = 'dispute' LIMIT 1 [ RunTime:0.000770s ]
+[ 2019-06-13T18:58:14+08:00 ][ sql ] [ SQL ] INSERT INTO `fa_auth_rule` (`pid` , `name` , `title` , `icon` , `remark` , `ismenu` , `status` , `createtime` , `updatetime`) VALUES (0 , 'dispute' , '测试管理' , 'fa fa-circle-o' , '' , 1 , 'normal' , 1560423494 , 1560423494) [ RunTime:0.100755s ]
+[ 2019-06-13T18:58:14+08:00 ][ sql ] [ SQL ] SELECT `id` FROM `fa_auth_rule` WHERE  `name` = 'dispute/index' LIMIT 1 [ RunTime:0.000923s ]
+[ 2019-06-13T18:58:14+08:00 ][ sql ] [ SQL ] SELECT `id` FROM `fa_auth_rule` WHERE  `name` = 'dispute/add' LIMIT 1 [ RunTime:0.000658s ]
+[ 2019-06-13T18:58:14+08:00 ][ sql ] [ SQL ] SELECT `id` FROM `fa_auth_rule` WHERE  `name` = 'dispute/edit' LIMIT 1 [ RunTime:0.000618s ]
+[ 2019-06-13T18:58:14+08:00 ][ sql ] [ SQL ] SELECT `id` FROM `fa_auth_rule` WHERE  `name` = 'dispute/del' LIMIT 1 [ RunTime:0.000715s ]
+[ 2019-06-13T18:58:14+08:00 ][ sql ] [ SQL ] SELECT `id` FROM `fa_auth_rule` WHERE  `name` = 'dispute/multi' LIMIT 1 [ RunTime:0.000606s ]
+[ 2019-06-13T18:58:14+08:00 ][ sql ] [ SQL ] INSERT INTO `fa_auth_rule` (`id` , `pid` , `name` , `icon` , `title` , `ismenu` , `status` , `createtime` , `updatetime`) VALUES (NULL , 219 , 'dispute/index' , 'fa fa-circle-o' , '查看' , 0 , 'normal' , 1560423494 , 1560423494) [ RunTime:0.000858s ]
+[ 2019-06-13T18:58:14+08:00 ][ sql ] [ SQL ] INSERT INTO `fa_auth_rule` (`id` , `pid` , `name` , `icon` , `title` , `ismenu` , `status` , `createtime` , `updatetime`) VALUES (NULL , 219 , 'dispute/add' , 'fa fa-circle-o' , '添加' , 0 , 'normal' , 1560423494 , 1560423494) [ RunTime:0.000607s ]
+[ 2019-06-13T18:58:14+08:00 ][ sql ] [ SQL ] INSERT INTO `fa_auth_rule` (`id` , `pid` , `name` , `icon` , `title` , `ismenu` , `status` , `createtime` , `updatetime`) VALUES (NULL , 219 , 'dispute/edit' , 'fa fa-circle-o' , '编辑' , 0 , 'normal' , 1560423494 , 1560423494) [ RunTime:0.000625s ]
+[ 2019-06-13T18:58:14+08:00 ][ sql ] [ SQL ] INSERT INTO `fa_auth_rule` (`id` , `pid` , `name` , `icon` , `title` , `ismenu` , `status` , `createtime` , `updatetime`) VALUES (NULL , 219 , 'dispute/del' , 'fa fa-circle-o' , '删除' , 0 , 'normal' , 1560423494 , 1560423494) [ RunTime:0.000601s ]
+[ 2019-06-13T18:58:14+08:00 ][ sql ] [ SQL ] INSERT INTO `fa_auth_rule` (`id` , `pid` , `name` , `icon` , `title` , `ismenu` , `status` , `createtime` , `updatetime`) VALUES (NULL , 219 , 'dispute/multi' , 'fa fa-circle-o' , '批量更新' , 0 , 'normal' , 1560423494 , 1560423494) [ RunTime:0.001445s ]

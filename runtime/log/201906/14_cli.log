@@ -1,0 +1,16 @@
+[ 2019-06-14T16:34:53+08:00 ][ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000165s ]
+[ info ] [ LOG ] INIT File
+[ 2019-06-14T16:34:53+08:00 ][ info ] [ CACHE ] INIT File
+[ 2019-06-14T16:34:53+08:00 ][ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.005090s ]
+[ 2019-06-14T16:34:53+08:00 ][ info ] [ DB ] INIT mysql
+[ 2019-06-14T16:34:53+08:00 ][ sql ] [ DB ] CONNECT:[ UseTime:0.002853s ] mysql:host=127.0.0.1;port=3308;dbname=fastadmin;charset=utf8
+[ 2019-06-14T16:34:53+08:00 ][ sql ] [ SQL ] SHOW TABLE STATUS LIKE 'arrest1' [ RunTime:0.001470s ]
+[ 2019-06-14T16:34:53+08:00 ][ sql ] [ SQL ] SHOW TABLE STATUS LIKE 'fa_arrest1' [ RunTime:0.003145s ]
+[ 2019-06-14T16:35:59+08:00 ][ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000163s ]
+[ info ] [ LOG ] INIT File
+[ 2019-06-14T16:35:59+08:00 ][ info ] [ CACHE ] INIT File
+[ 2019-06-14T16:35:59+08:00 ][ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.007261s ]
+[ 2019-06-14T16:36:00+08:00 ][ info ] [ DB ] INIT mysql
+[ 2019-06-14T16:36:00+08:00 ][ sql ] [ DB ] CONNECT:[ UseTime:0.152276s ] mysql:host=127.0.0.1;port=3308;dbname=fastadmin;charset=utf8
+[ 2019-06-14T16:36:00+08:00 ][ sql ] [ SQL ] SHOW COLUMNS FROM `fa_auth_rule` [ RunTime:0.005123s ]
+[ 2019-06-14T16:36:00+08:00 ][ sql ] [ SQL ] SELECT * FROM `fa_auth_rule` WHERE  (  `name` LIKE 'arrest1%' ) [ RunTime:0.002210s ]

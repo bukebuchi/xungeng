@@ -22,8 +22,8 @@ class Dispute extends Backend
     {
         parent::_initialize();
         $this->model = new \app\admin\model\Dispute;
-        $this->view->assign("hobbydataList", $this->model->getHobbydataList());
-        $this->view->assign("genderdataList", $this->model->getGenderdataList());
+        $this->view->assign("genderdataaList", $this->model->getGenderdataaList());
+        $this->view->assign("genderdatabList", $this->model->getGenderdatabList());
     }
     
     /**

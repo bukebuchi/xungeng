@@ -156,7 +156,6 @@
                     var pp = local.getResults().getPoi(0).point;    //获取第一个智能搜索的结果
                     map.centerAndZoom(pp, 18);
                     map.addOverlay(new BMap.Marker(pp));    //添加标注
-                    addpoint(pp);
                 }
 
                 var local = new BMap.LocalSearch(map, { //智能搜索

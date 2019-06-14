@@ -1,36 +1,57 @@
 define(['jquery', 'bootstrap', 'backend', 'table', 'form'], function ($, undefined, Backend, Table, Form) {
+
     var Controller = {
         index: function () {
-            //
             // 初始化表格参数配置
             Table.api.init({
                 extend: {
-                    index_url: 'example/baidumap/index',
-                    add_url: 'example/baidumap/add',
-                    edit_url: 'example/baidumap/edit',
-                    del_url: 'example/baidumap/del',
-                    multi_url: 'example/baidumap/multi',
-                    table: '',
+                    index_url: 'question/index' + location.search,
+                    add_url: 'question/add',
+                    edit_url: 'question/edit',
+                    del_url: 'question/del',
+                    multi_url: 'question/multi',
+                    table: 'question',
                 }
             });
 
             var table = $("#table");
-
+            //给添加按钮添加`data-area`属性
+            $(".btn-add").data("area", ["100%", "100%"]);
+            //当内容渲染完成给编辑按钮添加`data-area`属性
+            table.on('post-body.bs.table', function (e, settings, json, xhr) {
+                $(".btn-editone").data("area", ["100%", "100%"]);
+            });
             // 初始化表格
             table.bootstrapTable({
                 url: $.fn.bootstrapTable.defaults.extend.index_url,
                 pk: 'id',
                 sortName: 'id',
+                search: false,
+                commonSearch: true,
+                searchFormVisible: true,
+                searchFormTemplate: 'customformtpl',
                 columns: [
                     [
                         {checkbox: true},
-                        {field: 'id', title: 'ID', operate: false},
-                        {field: 'admin_id', title: __('Admin_id'), visible: false, operate: false},
-                        {field: 'username', title: __('Username'), formatter: Table.api.formatter.search},
-                        {field: 'title', title: __('Title')},
-                        {field: 'url', title: __('Url'), align: 'left'},
-                        {field: 'ip', title: __('IP')},
-                        {field: 'createtime', title: __('Create time'), formatter: Table.api.formatter.datetime, operate: 'RANGE', addclass: 'datetimerange', sortable: true},
+                        {field: 'id', title: __('Id'),operate: false},
+                        {field: 'category_ids', title: __('Category_ids'), formatter: Table.api.formatter.search,visible:false,operate: false},
+                        {field: 'images', title: __('Images'), events: Table.api.events.image, formatter: Table.api.formatter.images, operate: false},
+                        {field: 'carid', title: __('Carid'), operate:'like'},
+                        {field: 'cartype', title: __('Cartype'),operate: false},
+                        {field: 'carcolor', title: __('Carcolor'),operate: false},
+                      
+                        {field: 'carowname', title: __('Carowname'),operate:'like'},
+                        {field: 'carownidentity', title: __('Carownidentity'),operate: false},
+                        {field: 'carownertel', title: __('Carownertel'),operate: false},
+                        {field: 'carownercity', title: __('Carownercity'),operate: false},
+                        {field: 'questionname', title: __('Questionname'),operate:'like'},
+                        {field: 'genderdata', title: __('Genderdata'), searchList: {"male":__('Genderdata male'),"female":__('Genderdata female')}, formatter: Table.api.formatter.normal,operate: false},
+                        {field: 'identity', title: __('Identity'),operate: false},
+                        {field: 'city', title: __('City'),operate: false},
+                        {field: 'telphone', title: __('Telphone'),operate: false},
+                        {field: 'addressname', title: __('Addressname'),operate: false},
+                        
+                        {field: 'activitytime', title: __('Activitytime'), formatter: Table.api.formatter.datetime,operate:'RANGE', addclass:'datetimerange', sortable: true},
                         {field: 'operate', title: __('Operate'), table: table, events: Table.api.events.operate, formatter: Table.api.formatter.operate}
                     ]
                 ]
@@ -40,12 +61,16 @@ define(['jquery', 'bootstrap', 'backend', 'table', 'form'], function ($, undefin
             Table.api.bindevent(table);
         },
         add: function () {
+            Form.events.selectpage($("form"));
+            Form.events.datetimepicker($("form"));
             Controller.api.bindevent();
         },
         edit: function () {
+            Form.events.selectpage($("form"));
+    Form.events.datetimepicker($("form"));
             Controller.api.bindevent();
         },
-        map: function () {
+         map: function () {
             Form.api.bindevent($("form[role=form]"));
             require(['async!BMap'], function () {
                 // 更多文档可参考 http://lbsyun.baidu.com/jsdemo.htm
