@@ -10,7 +10,7 @@ define(['jquery', 'bootstrap', 'backend', 'table', 'form'], function ($, undefin
                     edit_url: 'duty/edit',
                     del_url: 'duty/del',
                     multi_url: 'duty/multi',
-                   table: 'duty',
+                    table: 'duty',
                 }
             });
 
@@ -27,7 +27,7 @@ define(['jquery', 'bootstrap', 'backend', 'table', 'form'], function ($, undefin
                         {field: 'id', title: __('Id')},
                         {field: 'category_ids', title: __('Category_ids')},
                         {field: 'addressname', title: __('Addressname')},
-                        {field: 'images', title: __('Images'), events: Table.api.events.image, formatter: Table.api.formatter.images},
+                        {field: 'activitytime', title: __('Activitytime'), operate:'RANGE', addclass:'datetimerange'},
                         {field: 'operate', title: __('Operate'), table: table, events: Table.api.events.operate, formatter: Table.api.formatter.operate}
                     ]
                 ]

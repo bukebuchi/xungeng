@@ -5,12 +5,12 @@ define(['jquery', 'bootstrap', 'backend', 'table', 'form'], function ($, undefin
             // 初始化表格参数配置
             Table.api.init({
                 extend: {
-                    index_url: 'traffic/index' + location.search,
-                    add_url: 'traffic/add',
-                    edit_url: 'traffic/edit',
-                    del_url: 'traffic/del',
-                    multi_url: 'traffic/multi',
-                    table: 'traffic',
+                    index_url: 'relief/index' + location.search,
+                    add_url: 'relief/add',
+                    edit_url: 'relief/edit',
+                    del_url: 'relief/del',
+                    multi_url: 'relief/multi',
+                    table: 'relief',
                 }
             });
 
@@ -38,13 +38,8 @@ define(['jquery', 'bootstrap', 'backend', 'table', 'form'], function ($, undefin
                         {field: 'addressname', title: __('Addressname'),operate: false},
                         {field: 'activitytime', title: __('Activitytime'), operate:'RANGE', addclass:'datetimerange', sortable: true},
                         {field: 'images', title: __('Images'), events: Table.api.events.image, formatter: Table.api.formatter.images, operate: false},
-                        {field: 'hobbydata', title: __('Hobbydata'), searchList: {"qd":__('Hobbydata qd'),"sd":__('Hobbydata sd'),"xc":__('Hobbydata xc')}, operate:'FIND_IN_SET', formatter: Table.api.formatter.label, operate: false},
-                        {field: 'keywords', title: __('Keywords'), operate: false},
-                        {field: 'age', title: __('Age'), operate: false},
-                        {field: 'identity', title: __('Identity'), operate: false},
-                        {field: 'city', title: __('City'), operate: false},
-                        {field: 'telhone', title: __('Telhone'), operate: false},
-                        {field: 'genderdata', title: __('Genderdata'), searchList: {"male":__('Genderdata male'),"female":__('Genderdata female')}, formatter: Table.api.formatter.normal, operate: false},
+                        {field: 'views', title: __('Views'), operate: false},
+                        {field: 'fireviews', title: __('Fireviews'), operate: false},
                         {field: 'addcontent', title: __('Addcontent'), operate: false},
                         {field: 'operate', title: __('Operate'), table: table, events: Table.api.events.operate, formatter: Table.api.formatter.operate}
                     ]
@@ -55,12 +50,12 @@ define(['jquery', 'bootstrap', 'backend', 'table', 'form'], function ($, undefin
             Table.api.bindevent(table);
         },
         add: function () {
-            Form.events.selectpage($("form"));
+             Form.events.selectpage($("form"));
             Form.events.datetimepicker($("form"));
             Controller.api.bindevent();
         },
         edit: function () {
-            Form.events.selectpage($("form"));
+             Form.events.selectpage($("form"));
             Form.events.datetimepicker($("form"));
             Controller.api.bindevent();
         },

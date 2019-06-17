@@ -33,7 +33,7 @@ define(['jquery', 'bootstrap', 'backend', 'table', 'form'], function ($, undefin
                 columns: [
                     [
                         {checkbox: true},
-                        {field: 'id', title: __('Id')},
+                        {field: 'id', title: __('Id'), operate: false},
                         {field: 'category_ids', title: __('Category_ids'),formatter: Table.api.formatter.search},
                         {field: 'city', title: __('City'),operate: false},
                         {field: 'addressname', title: __('Addressname'),operate: false},
