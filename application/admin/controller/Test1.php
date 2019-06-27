@@ -9,26 +9,33 @@ use app\common\controller\Backend;
  *
  * @icon fa fa-circle-o
  */
-class Policy extends Backend
+class Test1 extends Backend
 {
     
     /**
-     * Policy模型对象
-     * @var \app\admin\model\Policy
+     * Test1模型对象
+     * @var \app\admin\model\Test1
      */
     protected $model = null;
-   
-    protected $noNeedRight = ['selectpage'];
+
+    /**
+     * 是否开启数据限制
+     * 支持auth/personal
+     * 表示按权限判断/仅限个人
+     * 默认为禁用,若启用请务必保证表中存在admin_id字段
+     */
     protected $dataLimit = 'auth';
-    
+
+    /**
+     * 数据限制字段
+     */
     protected $dataLimitField = 'admin_id';
 
     public function _initialize()
     {
         parent::_initialize();
-        $this->model = new \app\admin\model\Policy;
-        $this->view->assign("xingshihobbydataList", $this->model->getXingshihobbydataList());
-        $this->view->assign("contenthobbydataList", $this->model->getContenthobbydataList());
+        $this->model = new \app\admin\model\Test1;
+
     }
     
     /**
@@ -36,8 +43,6 @@ class Policy extends Backend
      * 因此在当前控制器中可不用编写增删改查的代码,除非需要自己控制这部分逻辑
      * 需要将application/admin/library/traits/Backend.php中对应的方法复制到当前控制器,然后进行修改
      */
-    
-
     
 
 }

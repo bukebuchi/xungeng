@@ -17,6 +17,10 @@ class Traffic extends Backend
      * @var \app\admin\model\Traffic
      */
     protected $model = null;
+    protected $noNeedRight = ['selectpage'];
+    protected $dataLimit = 'auth';
+    
+    protected $dataLimitField = 'admin_id';
 
     public function _initialize()
     {

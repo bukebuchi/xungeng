@@ -17,6 +17,7 @@ class Dispute extends Backend
      * @var \app\admin\model\Dispute
      */
     protected $model = null;
+    
 
     public function _initialize()
     {
