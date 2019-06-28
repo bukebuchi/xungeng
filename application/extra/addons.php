@@ -4,6 +4,10 @@ return array (
   'autoload' => false,
   'hooks' => 
   array (
+    'run' => 
+    array (
+      0 => 'voicenotice',
+    ),
   ),
   'route' => 
   array (
